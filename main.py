@@ -10,14 +10,14 @@ def collat(n):
       if number % 2 == 1:
         number = (number * 3) + 1
         if number in collatz:
-          collatz[i].append(collatz[number])
+          collatz[i] += collatz[number]
           number = 1
         else:
           collatz[i].append(number)
       else:
         number = number // 2
         if number in collatz:
-          collatz[i].append(collatz[number])
+          collatz[i] += collatz[number]
           number = 1
         else:
           collatz[i].append(number)
